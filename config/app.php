@@ -166,7 +166,12 @@ return [
         /*
          * Package Service Providers...
          */
-
+//        Debug staff
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Laracasts\Generators\GeneratorsServiceProvider::class,
+        //Support staff
+        Collective\Html\HtmlServiceProvider::class,
         //
 
         /*
@@ -225,6 +230,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        //Debug
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+
+        //Support staff
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
