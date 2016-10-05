@@ -17,5 +17,21 @@ Route::get('/', function () {
 
 
 Auth::routes();
-
+Route::get('/new', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
+//Contact && AboutPage
+Route::get('/about', 'PageController@about');
+Route::get('/contact', 'PageController@contact');
+
+//Articles
+//
+//Route::get('/articles', 'ArticlesController@index');
+//Route::get('/articles/create', 'ArticlesController@create');
+//Route::get('/articles/{id}', 'ArticlesController@show');
+//Route::post('/articles', 'ArticlesController@store');
+//
+//Route::get('/articles/{id}/edit', 'ArticlesController@edit');
+
+Route::resource('articles', 'ArticlesController');
+
+
